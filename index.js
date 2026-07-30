@@ -26,12 +26,27 @@ const mongoose = require('mongoose');
     //       user2.save();
      
      
-      User.insertMany([
-        {name:"Suraj",email:"Suraj@gmail.com", age:21},
-        {name:"vedant",email:"Vedant@gmail.com", age:22},
-        {name:"Pranav",email:"Pranav@gmail.com", age:24}
-      ]).then((res)=>{
-        console.log(res);
+    //   User.insertMany([
+    //     {name:"Suraj",email:"Suraj@gmail.com", age:21},
+    //     {name:"vedant",email:"Vedant@gmail.com", age:22},
+    //     {name:"Pranav",email:"Pranav@gmail.com", age:24}
+    //   ]).then((res)=>{
+    //     console.log(res);
+    //   }).catch((err)=>{
+    //     console.log(err);
+    //   })
+
+      User.find({age:21}).then((res)=>{
+         console.log(res);
       }).catch((err)=>{
-        console.log(err);
+         console.log(err);
       })
+
+
+       User.findById("6a6a3016cacee05c38ea2c79").then((res)=>{
+        console.log(res);
+       }).catch((err)=>{
+        console.log(err);
+       });
+
+    
