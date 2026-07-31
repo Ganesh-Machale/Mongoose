@@ -36,17 +36,39 @@ const mongoose = require('mongoose');
     //     console.log(err);
     //   })
 
-      User.find({age:21}).then((res)=>{
+      // User.find({age:21}).then((res)=>{
+      //    console.log(res);
+      // }).catch((err)=>{
+      //    console.log(err);
+      // })
+
+
+      //  User.findById("6a6a3016cacee05c38ea2c79").then((res)=>{
+      //   console.log(res);
+      //  }).catch((err)=>{
+      //   console.log(err);
+      //  });
+
+
+      // User.findOneAndUpdate({age:{$gt:27}}, {age:29},{new:true})
+      // .then((res)=>{
+      //    console.log(res);
+      // }).catch((err)=>{
+      //    console.log(err);
+      // });
+
+      // User.findByIdAndUpdate(
+      //    ("6a6a1da5ffc6bf21db0ae40e"),
+      //    {name:"Ganesh Machale" , email:"ganeshmachale001@gmail.com"},
+      //    {new:true})
+      //           .then((res)=>{
+      //              console.log(res);
+      //          }).catch((err)=>{
+      //                 consolr.log(err);
+      //                   });
+
+      User.findOneAndDelete("6a6a1e16896275282de4a4d9").then((res)=>{
          console.log(res);
       }).catch((err)=>{
          console.log(err);
-      })
-
-
-       User.findById("6a6a3016cacee05c38ea2c79").then((res)=>{
-        console.log(res);
-       }).catch((err)=>{
-        console.log(err);
-       });
-
-    
+      });
