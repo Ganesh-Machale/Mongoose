@@ -67,7 +67,7 @@ const mongoose = require('mongoose');
       //                 consolr.log(err);
       //                   });
 
-      User.findOneAndDelete("6a6a1e16896275282de4a4d9").then((res)=>{
+      User.findOneAndDelete({name:'Pranav'}).then((res)=>{
          console.log(res);
       }).catch((err)=>{
          console.log(err);
