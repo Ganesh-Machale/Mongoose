@@ -67,8 +67,24 @@ const mongoose = require('mongoose');
       //                 consolr.log(err);
       //                   });
 
-      User.findOneAndDelete({name:'Pranav'}).then((res)=>{
-         console.log(res);
-      }).catch((err)=>{
-         console.log(err);
+      // User.insertOne({name:"Pranav",email:"pranav@gmail.com",age:24}).then((res)=>{
+      //    console.log(res);
+      // }).catch((err)=>{
+      //    console.log(err);
+      // });
+                 
+
+
+                      //   writing schema in proper format
+      const bookschema = new mongoose.Schema({
+          title :{
+            type: String,
+            required: true,
+          },
+          autor:{
+            type: String,
+          },
+          price: {
+            type: Number,
+          },
       });
