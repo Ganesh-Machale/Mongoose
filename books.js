@@ -38,5 +38,5 @@ const mongoose = require('mongoose');
   Book.findByIdAndUpdate("6a70a755d3ead36fa89a3436",{price:700},{runValidators:true}).then((res)=>{
       console.log(res);
      }).catch((err)=>{
-      console.log(err);
-     });
+      console.log(err.errors.price.properties.meassage);
+        });
