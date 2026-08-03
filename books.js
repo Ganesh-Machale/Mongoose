@@ -22,7 +22,21 @@ const mongoose = require('mongoose');
               autor:{
                 type: String,
               },
+              Discount:{
+                type:Number,
+                default:0,
+              },
               price: {
                 type: Number,
+                min:[1,"price is too low"],
               },
           });
+
+
+          const Book = mongoose.model("Book",bookschema);
+
+  Book.findByIdAndUpdate("6a70a755d3ead36fa89a3436",{price:700},{runValidators:true}).then((res)=>{
+      console.log(res);
+     }).catch((err)=>{
+      console.log(err);
+     });
